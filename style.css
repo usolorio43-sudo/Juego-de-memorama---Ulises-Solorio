@@ -1,0 +1,80 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 12px;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.card {
+    width: 100px;
+    height: 110px;
+    background: white;
+    color: #333;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card.matched {
+    background: #a5f3a5;
+    cursor: default;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    background: #ffcf40;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(4, 70px);
+        gap: 8px;
+    }
+
+    .card {
+        width: 70px;
+        height: 85px;
+        font-size: 28px;
+    }
+}
